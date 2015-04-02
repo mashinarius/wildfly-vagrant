@@ -1,0 +1,6 @@
+    - name: get wildfly package
+      get_url: url=http://is-rational.iba/boxes/wildfly-8.2.0.Final.zip dest=/opt/wildfly-8.2.0.Final.zip  mode=0644 force=yes
+    - name: unzip 
+      command: unzip -o /opt/wildfly-8.2.0.Final.zip -d /opt
+    - name: rm
+      command: rm /opt/wildfly-8.2.0.Final.zip

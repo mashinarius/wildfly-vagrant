@@ -1,0 +1,8 @@
+    - name: download httpd package
+      get_url: url=http://is-rational.iba/boxes/mod_cluster-1.3.1.Beta2-linux2-x64.tar.gz dest=/opt/mod_cluster.tar.gz  mode=0644 force=yes
+    - name: unzip
+      command: tar zxvf /opt/mod_cluster.tar.gz -C /
+    - name: rm
+      command: rm /opt/mod_cluster.tar.gz
+    - name: rm
+      command: /opt/jboss/httpd/sbin/installhome.sh

@@ -1,0 +1,9 @@
+---
+# file: wildflyservers.yml
+
+- hosts: wildflygroup
+  user: vagrant
+  sudo: True
+  roles:
+    - common
+    - wildfly

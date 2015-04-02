@@ -1,0 +1,9 @@
+---
+# file: httpserver.yml
+
+- hosts: httpgroup
+  user: vagrant
+  sudo: True
+  roles:
+    - common
+    - httpd

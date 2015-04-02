@@ -1,0 +1,16 @@
+---
+# file: all.yml
+
+- hosts: wildflygroup
+  user: vagrant
+  sudo: True
+  roles:
+    - common
+    - wildfly
+
+- hosts: httpgroup
+  user: vagrant
+  sudo: True
+  roles:
+    - common
+    - httpd
