@@ -6,3 +6,10 @@
       command: rm /opt/mod_cluster.tar.gz
     - name: rm
       command: /opt/jboss/httpd/sbin/installhome.sh
+    - name: Install the additional packages
+      apt: name={{ item }} state=installed update_cache=yes
+      with_items: 
+      - zabbix-server-pgsql
+      - zabbix-frontend-php 
+      - php5-pgsql
+      - tomcat7
